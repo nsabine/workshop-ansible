@@ -1,0 +1,23 @@
+# vim: set ft=ansible:
+---
+- hosts: localhost
+  connection: local
+  become: False
+  gather_facts: no
+  vars_files:
+    - vars.yaml
+
+# Create the VPC
+- include: create_vpc.yaml
+
+# Set up security groups for the VPC
+- include: create_security_groups.yaml
+  vars:
+    vpc_id: "{{ vpc.vpc_id }}"
+
+# Create nodes
+- include: create_nodes.yaml
+  vars:
+    sg_group_id: "{{ vpc.vpc_id }}"
+
+
