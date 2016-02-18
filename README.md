@@ -12,7 +12,7 @@ In order to use this demo, you need to have:
 * Ansible [installed locally](http://docs.ansible.com/ansible/intro_installation.html)
 * [Python 2.7](https://www.python.org/downloads/)
 * AWS CLI tools [installed](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip)
-** You must run `aws configure` and populate your access and secret key variables
+  * You must run `aws configure` and populate your access and secret key variables
 
 ## Usage
 Once you have the tools from above installed and configured, use this process to quickly spin up a distributed, replicated Gluster volume.
@@ -22,7 +22,7 @@ First, review the default settings in [vars.yaml](vars.yaml).
 ```
 $ ssh-agent bash
 $ ssh-add /path/to/instancekey.pem
-$ git clone https://github.com/jason-callaway/gluster-ansible.git
+$ git clone https://github.com/jason-callaway/workshop-ansible.git
 $ cd workshop-ansible
 $ ./run.sh 25 # Create a cluster with 25 student instances
 ```
