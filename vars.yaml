@@ -5,7 +5,7 @@ cluster_id: docker-workshop
 # Currently only supports us-east-1
 ec2_region: us-east-1
 ec2_az: c
-ec2_image: ami-492d5b2c
+ec2_image: ami-6ac0bc00
 ec2_keypair: rhtps-docker-workshop
 ec2_instance_type: t2.medium
 r53_zone: rhtps.io
