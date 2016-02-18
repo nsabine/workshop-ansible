@@ -25,7 +25,7 @@
         az: "{{ ec2_region }}{{ ec2_az }}"
         resource_tags:
           env: "{{ cluster_id }}"
-          Name: "{{ cluster_id }}-subnet-a"
+          Name: "{{ cluster_id }}-subnet"
       internet_gateway: yes
       route_tables:
       - subnets:
